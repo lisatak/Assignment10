@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Teams>
+
+<!--Link to home page-->
+<a asp-action="Index" asp-controller="Home" asp-route-teamid=""
+   class="btn btn-block @(ViewBag.SelectedTeam == null ? "btn-primary" : "btn-outline-secondary")">Home</a>
+
+<!--Filter players by team-->
+@foreach (var x in Model)
+{
+    <a asp-action="Index" asp-controller="Home"
+       class="btn btn-block @(x.TeamId.ToString() == ViewBag.SelectedTeam ? "btn-primary" : "btn-outline-secondary")"
+       asp-route-teamid="@x.TeamId"
+       asp-route-teamname="@x.TeamName"
+       asp-route-pagenum="1">@x.TeamName</a>
+}

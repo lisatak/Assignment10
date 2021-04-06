@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\lctak\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\lctak\\.nuget\\packages"
+    ]
+  }
+}
